@@ -1,23 +1,30 @@
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Index from "./pages/Index";
+import Store from "./pages/Store";
+import Categories from "./pages/Categories";
+import CategoryPage from "./pages/CategoryPage";
+import ProductPage from "./pages/ProductPage";
+import Cart from "./pages/Cart";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
-      <header className="p-6 border-b border-white/10">
-        <h1 className="text-3xl font-bold">icanmake3d</h1>
-        <p className="text-white/60">3D Models Marketplace</p>
-      </header>
-
-      <main className="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-white/5 p-4 rounded-xl">
-          <h2 className="font-semibold">Your first model</h2>
-          <p className="text-sm text-white/60">Cyber Car</p>
-          <button className="mt-3 px-4 py-2 bg-white text-black rounded">
-            Buy
-          </button>
-        </div>
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route path="/category/:slug" element={<CategoryPage />} />
+        <Route path="/product/:id" element={<ProductPage />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
