@@ -64,7 +64,13 @@ export default function ProductPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Model3DViewer height="500px" autoRotate showControls />
+              {/* <Model3DViewer height="500px" autoRotate showControls /> */}
+              <Model3DViewer 
+                  modelUrl={model.modelUrl} 
+                  height="500px" 
+                  autoRotate 
+                  showControls />
+
 
               {/* Image gallery */}
               <div className="grid grid-cols-3 gap-4 mt-4">
