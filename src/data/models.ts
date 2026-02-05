@@ -30,6 +30,8 @@ export interface Model3D {
   new?: boolean;
 }
 
+
+
 export const categories = [
   { id: 'cars', name: 'Cars', icon: '🚗', description: 'High-detail vehicle models' },
   { id: 'weapons', name: 'Weapons', icon: '⚔️', description: 'Swords, guns & combat gear' },
@@ -185,6 +187,33 @@ export const models: Model3D[] = [
     },
     new: true,
   },
+
+
+
+  {
+  id: '9',
+  name: 'Ford Mustang GT',
+  slug: 'ford-mustang-gt',
+  price: 59.99,
+  category: 'cars',
+  description: 'High quality cinematic Ford Mustang GT with detailed interior, optimized meshes and PBR materials. Perfect for games, films and visualizations.',
+  shortDescription: 'Cinematic Ford Mustang GT model',
+  thumbnail: muscleCarImg,
+  images: [muscleCarImg, muscleCarImg],
+  modelUrl: '/models/mustang-car1.glb',
+  techDetails: {
+    format: 'GLB',
+    polyCount: '65,000 tris',
+    textures: '4K PBR',
+    fileSize: '20 MB',
+    rigged: false,
+    animated: false,
+  },
+  featured: true,
+  new: true,
+},
+
+
 ];
 
 export const getModelBySlug = (slug: string) => models.find(m => m.slug === slug);
