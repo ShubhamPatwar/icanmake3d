@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Model3DViewer } from './Model3DViewer';
-import { GLBModelViewer } from './GLBModelViewer';
+import { GBLModelViewer } from './GBLModelViewer';
+
 
 
 
