@@ -120,7 +120,9 @@ export function HeroSection() {
               {/* Glow behind viewer */}
               <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl transform scale-90" />
               
-              <Model3DViewer height="500px" autoRotate showControls />
+              {/* <Model3DViewer height="500px" autoRotate showControls /> */}
+              <GLBModelViewer modelUrl="/models/mustang-car1.glb" height="500px" autoRotate showControls />
+
               
               {/* Floating badge */}
               <motion.div
