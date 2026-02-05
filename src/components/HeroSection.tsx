@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Model3DViewer } from './Model3DViewer';
+import { GLBModelViewer } from './GLBModelViewer';
+
+
 
 export function HeroSection() {
   return (
@@ -44,6 +47,15 @@ export function HeroSection() {
               <span className="gradient-text text-glow">3D Assets</span>{' '}
               for Creators
             </motion.h1>
+
+
+
+            <GLBModelViewer
+              modelUrl="/models/mustang-car1.glb"
+              height="500px"
+              autoRotate
+              showControls
+            />
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
