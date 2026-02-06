@@ -1,4 +1,4 @@
-import { GLBModelViewer } from '../components/GBLModelViewer';
+import { GLBModelViewer } from "@/components/GLBModelViewer";
 
 export default function MustangShowroom() {
   return (
