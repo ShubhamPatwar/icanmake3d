@@ -191,14 +191,15 @@ export const models: Model3D[] = [
   {
     id: '9',
     name: 'Mustang Sameer',
-    slug: 'Mustang-speed',
+    slug: 'mustang-speed',
     price: 19.99,
     category: 'cars',
     description: 'newest car',
     shortDescription: 'legend of awesomeness',
     thumbnail: MustangImg,
     images: [MustangImg,MustangImg,MustangImg],
-    modelUrl: 'public\models\Mustang.glb',
+    // modelUrl: 'public\models\Mustang.glb',
+    modelUrl: '/models/Mustang.glb',  // ✅ CORRECT PATH
     techDetails: {
       format: 'GLB, FBX, Blend',
       polyCount: '200,000 tris',
