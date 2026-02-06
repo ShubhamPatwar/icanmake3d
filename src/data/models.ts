@@ -6,6 +6,7 @@ import industrialCratesImg from '@/assets/models/industrial-crates.jpg';
 import muscleCarImg from '@/assets/models/muscle-car.jpg';
 import katanaCollectionImg from '@/assets/models/katana-collection.jpg';
 import cyberpunkApartmentImg from '@/assets/models/cyberpunk-apartment.jpg';
+import MustangImg from '@/assets/models/mustang.jpg';
 
 export interface Model3D {
   id: string;
@@ -185,7 +186,32 @@ export const models: Model3D[] = [
     },
     new: true,
   },
+
+
+  {
+    id: '9',
+    name: 'Mustang Sameer',
+    slug: 'Mustang-speed',
+    price: 19.99,
+    category: 'cars',
+    description: 'newest car',
+    shortDescription: 'legend of awesomeness',
+    thumbnail: MustangImg,
+    images: [MustangImg,MustangImg,MustangImg],
+    modelUrl: 'public\models\Mustang.tsx',
+    techDetails: {
+      format: 'GLB, FBX, Blend',
+      polyCount: '200,000 tris',
+      textures: '4K PBR + Emissive',
+      fileSize: '20 MB',
+    },
+    featured: true,
+    new: true,
+  },
+
 ];
+
+
 
 export const getModelBySlug = (slug: string) => models.find(m => m.slug === slug);
 export const getModelsByCategory = (category: string) => models.filter(m => m.category === category);

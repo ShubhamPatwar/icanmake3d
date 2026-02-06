@@ -1,8 +1,9 @@
+import { GLBModelViewer } from '@/components/GLBModelViewer';
+import { Model3DViewer } from '@/components/Model3DViewer';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
-import { Model3DViewer } from '@/components/Model3DViewer';
 import { ModelCard } from '@/components/ModelCard';
 import { Button } from '@/components/ui/button';
 import { getModelBySlug, models } from '@/data/models';
@@ -64,7 +65,16 @@ export default function ProductPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <Model3DViewer height="500px" autoRotate showControls />
+              {model.modelUrl ? (
+                      <GLBModelViewer 
+                        modelUrl={model.modelUrl}
+                        height="500px" 
+                        autoRotate 
+                        showControls 
+                      />
+                    ) : (
+                      <Model3DViewer height="500px" autoRotate showControls />
+                    )}
 
               {/* Image gallery */}
               <div className="grid grid-cols-3 gap-4 mt-4">
