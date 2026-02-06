@@ -198,7 +198,7 @@ export const models: Model3D[] = [
     shortDescription: 'legend of awesomeness',
     thumbnail: MustangImg,
     images: [MustangImg,MustangImg,MustangImg],
-    modelUrl: 'public\models\Mustang.tsx',
+    modelUrl: 'public\models\Mustang.glb',
     techDetails: {
       format: 'GLB, FBX, Blend',
       polyCount: '200,000 tris',
